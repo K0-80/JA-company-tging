@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 interface LoadingScreenProps {
@@ -6,7 +6,7 @@ interface LoadingScreenProps {
 }
 
 export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
-  const [username] = useState('Friend');
+  const [username] = useState('placeholder');
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
   }, [onLoadingComplete]);
 
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
         <motion.div
           initial={{ opacity: 1 }}
@@ -43,11 +43,11 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
               transition={{ delay: 0.3 }}
               className="text-3xl font-sue-ellen text-gray-800"
             >
-              Greetings, {username} --place holder username
+              Greetings, {username}
             </motion.h2>
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </>
   );
 }

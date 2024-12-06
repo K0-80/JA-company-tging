@@ -17,7 +17,7 @@ export function ChatBar() {
             type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Type your message..."
+            placeholder="Hows your day?"
             className="flex-1 bg-transparent border-none outline-none font-sue-ellen text-lg text-gray-700 placeholder-gray-400"
           />
           <motion.button

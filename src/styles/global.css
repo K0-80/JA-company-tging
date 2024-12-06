@@ -1,0 +1,71 @@
+:root {
+  /* Primary Colors */
+  --primary-purple: #674ab3;
+  --primary-magenta: #a348a6;
+  --primary-violet: #9f63c4;
+  --primary-lavender: #9075d8;
+  --primary-lilac: #cea2d7;
+
+  /* Color usage variables */
+  --background-primary: var(--primary-purple);
+  --background-secondary: var(--primary-magenta);
+  --accent-color: var(--primary-violet);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.87);
+}
+
+/* Base styles */
+html {
+  background: linear-gradient(
+    135deg,
+    var(--primary-purple),
+    var(--primary-magenta),
+    var(--primary-violet)
+  ) fixed;
+}
+
+body {
+  margin: 0;
+  color: var(--text-primary);
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Common elements styling */
+button {
+  background-color: var(--primary-lavender);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-lilac);
+}
+
+input, textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--primary-lilac);
+  color: var(--text-primary);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--primary-lavender);
+  border-color: transparent;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+} 
