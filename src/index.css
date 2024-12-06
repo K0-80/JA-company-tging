@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-sue-ellen {
+  font-family: 'Sue Ellen Francisco', cursive;
+}
+
+body {
+  background-color: #f0f2f5;
+}
