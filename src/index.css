@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 .font-sue-ellen {
   font-family: 'Sue Ellen Francisco', cursive;
@@ -24,4 +24,5 @@ html, body, #root {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  @apply bg-gradient-to-b from-primary-tea via-primary-lime to-primary-sage;
 }

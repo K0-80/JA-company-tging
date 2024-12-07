@@ -3,9 +3,8 @@ import { motion } from 'framer-motion';
 import { Header } from './components/Header';
 import { LoadingScreen } from './components/LoadingScreen';
 import { ChatBar } from './components/ChatBar';
-import FluidBackground from './components/FluidBackground';
 
-//seems to be lag spike upon site loading the loading screen thiong might have  some issues
+//seems to be lag spike upon site loading the loading screen might have  some issues
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,8 +30,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <FluidBackground />
-      <div className="h-screen overflow-hidden bg-[#f0f2f5]">
+      <div className="h-screen overflow-hidden">
         <Header />
         
         <main className="h-full pt-24 px-4 flex flex-col">
@@ -47,7 +45,7 @@ export default function App() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-8xl font-sue-ellen text-gray-800 mb-4"
+                className="text-8xl font-sue-ellen text-primary-moss mb-4"
               >
                 Slimo
               </motion.h1>
@@ -55,7 +53,7 @@ export default function App() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="font-sue-ellen text-3xl text-gray-600 max-w-md mx-auto"
+                className="font-sue-ellen text-3xl text-primary-verdigris max-w-md mx-auto"
               >
                 {randomQuote}
               </motion.p>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+// for the uhhh i got
 interface PlaceholderProps {
   size?: 'small' | 'medium' | 'large';
   delay?: number;

@@ -36,9 +36,9 @@ export function Header() {
               }}
               className="cursor-pointer"
             >
-              <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow duration-200 flex items-center gap-2">
-                {item.icon}
-                <span className="text-sm font-sue-ellen text-gray-600">{item.label}</span>
+              <div className="bg-primary-lime/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow duration-200 flex items-center gap-2 border-2 border-primary-teal">
+                <span className="text-primary-steel">{item.icon}</span>
+                <span className="text-sm font-sue-ellen text-primary-teal">{item.label}</span>
               </div>
             </motion.li>
           ))}
