@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Header } from './components/Header';
 import { LoadingScreen } from './components/LoadingScreen';
 import { ChatBar } from './components/ChatBar';
+import FluidSimulation from './components/FluidSimulation';
 
 //seems to be lag spike upon site loading the loading screen might have  some issues
 
@@ -29,7 +30,11 @@ export default function App() {
   }
 
   return (
-    <div className="App">
+    <div className="relative h-screen overflow-hidden">
+      <div className="fixed inset-0 z-0">
+        <FluidSimulation />
+      </div>
+
       <div className="h-screen overflow-hidden">
         <Header />
         

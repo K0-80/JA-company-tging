@@ -1,11 +1,11 @@
 import { useState, useCallback, useRef } from "react";
 // bruh sound sounds horrid ill fix later
-export const useTypewriter = (text: string, speed = 50, soundEnabled = false) => {
+export const useTypewriter = (text: string, speed = 20, soundEnabled = false) => {
   const [displayText, setDisplayText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Initialize audio i think?  
+  // Initialize audio 
   if (!audioRef.current) {
     audioRef.current = new Audio("/sounds/typewriter.mp3"); 
     audioRef.current.volume = 0.1; // volume thing
